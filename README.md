@@ -58,6 +58,9 @@ Usage Examples
 
     # Get information about a company
     company1 = FullContact.company(domain: 'fullcontact.com')
+
+    # Name normalization that also returns a likelihood based only on the order of the given name and family name as seen in the US population.
+    name = FullContact.normalizer(q: "KELLEY ANDREW")
     
     # Get information about a twitter and ensure a 30s socket open timeout and a 15s socket read timeout
     # Can throw a Faraday::Error::TimeoutError if timeouts are exceeded
